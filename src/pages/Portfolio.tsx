@@ -21,24 +21,24 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Dashboard Analytics',
-      description: 'A modern web application dashboard with real-time analytics and data visualization.',
+      title: 'لوحة تحكم تحليلية',
+      description: 'تطبيق ويب حديث للوحة التحكم مع التحليلات الفورية وتصور البيانات التفاعلي.',
       image: project1,
       technologies: ['React', 'TypeScript', 'Chart.js'],
       liveUrl: '#'
     },
     {
       id: 2,
-      title: 'E-Commerce Platform',
-      description: 'Full-featured online shopping platform with payment integration and inventory management.',
+      title: 'منصة تجارة إلكترونية',
+      description: 'منصة تسوق إلكترونية متكاملة مع نظام الدفع وإدارة المخزون والمنتجات.',
       image: project2,
       technologies: ['React', 'Node.js', 'MongoDB'],
       liveUrl: '#'
     },
     {
       id: 3,
-      title: 'Task Management App',
-      description: 'Productivity application for team collaboration and project management with real-time updates.',
+      title: 'تطبيق إدارة المهام',
+      description: 'تطبيق إنتاجية لتعاون الفرق وإدارة المشاريع مع التحديثات الفورية.',
       image: project3,
       technologies: ['React', 'Firebase', 'Material-UI'],
       liveUrl: '#'
@@ -48,7 +48,7 @@ const Portfolio = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted');
+    console.log('تم إرسال النموذج');
   };
 
   return (
@@ -69,12 +69,12 @@ const Portfolio = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-portfolio-text">Hello, I'm </span>
-              <span className="text-gradient">Ibrahim Mahmoud</span>
+              <span className="text-portfolio-text">أهلاً بك، أنا </span>
+              <span className="text-gradient">إبراهيم محمود</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-portfolio-text-muted mb-8 max-w-2xl mx-auto">
-              Web Developer passionate about creating beautiful, functional, and user-friendly digital experiences
+              مطور مواقع ويب شغوف بإنشاء تجارب رقمية جميلة وعملية وسهلة الاستخدام
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -83,7 +83,7 @@ const Portfolio = () => {
                 className="bg-portfolio-primary hover:bg-portfolio-primary/80 text-white px-8 py-4 text-lg font-semibold glow-primary transition-all duration-300"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Get In Touch
+                تواصل معي
               </Button>
               <Button 
                 variant="outline" 
@@ -91,7 +91,7 @@ const Portfolio = () => {
                 className="border-portfolio-secondary text-portfolio-secondary hover:bg-portfolio-secondary/10 px-8 py-4 text-lg font-semibold"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                View My Work
+                تصفح أعمالي
               </Button>
             </div>
           </div>
@@ -107,26 +107,25 @@ const Portfolio = () => {
       <section id="about" className="section-padding bg-portfolio-bg-mid/50">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">About Me</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">نبذة عني</h2>
             <div className="w-24 h-1 bg-portfolio-primary mx-auto rounded-full"></div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
               <p className="text-lg text-portfolio-text-muted leading-relaxed mb-6">
-                I'm a passionate web developer with over 3 years of experience creating modern, 
-                responsive websites and applications. I specialize in front-end development with 
-                a strong focus on user experience and clean, maintainable code.
+                أنا مطور مواقع ويب شغوف بخبرة تزيد عن 3 سنوات في إنشاء مواقع وتطبيقات 
+                حديثة ومتجاوبة. أتخصص في تطوير الواجهات الأمامية مع التركيز بشكل كبير 
+                على تجربة المستخدم والكود النظيف والقابل للصيانة.
               </p>
               <p className="text-lg text-portfolio-text-muted leading-relaxed mb-6">
-                My journey in web development started with curiosity about how websites work, 
-                and it has evolved into a deep passion for crafting digital solutions that make 
-                a real difference in people's lives.
+                بدأت رحلتي في تطوير الويب بفضول حول كيفية عمل المواقع، وتطورت لتصبح 
+                شغفاً عميقاً لصياغة حلول رقمية تحدث فرقاً حقيقياً في حياة الناس.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 text-portfolio-text">
                   <MapPin className="w-5 h-5 text-portfolio-accent" />
-                  <span>Available Worldwide</span>
+                  <span>متاح للعمل عالمياً</span>
                 </div>
                 <div className="flex items-center gap-2 text-portfolio-text">
                   <Mail className="w-5 h-5 text-portfolio-accent" />
@@ -138,19 +137,19 @@ const Portfolio = () => {
             <div className="grid grid-cols-2 gap-4">
               <Card className="card-gradient p-6 border border-portfolio-primary/30 card-3d">
                 <div className="text-3xl font-bold text-portfolio-primary mb-2">50+</div>
-                <div className="text-portfolio-text-muted">Projects Completed</div>
+                <div className="text-portfolio-text-muted">مشروع مكتمل</div>
               </Card>
               <Card className="card-gradient p-6 border border-portfolio-secondary/30 card-3d">
                 <div className="text-3xl font-bold text-portfolio-secondary mb-2">3+</div>
-                <div className="text-portfolio-text-muted">Years Experience</div>
+                <div className="text-portfolio-text-muted">سنوات خبرة</div>
               </Card>
               <Card className="card-gradient p-6 border border-portfolio-accent/30 card-3d">
                 <div className="text-3xl font-bold text-portfolio-accent mb-2">100%</div>
-                <div className="text-portfolio-text-muted">Client Satisfaction</div>
+                <div className="text-portfolio-text-muted">رضا العملاء</div>
               </Card>
               <Card className="card-gradient p-6 border border-portfolio-primary/30 card-3d">
                 <div className="text-3xl font-bold text-portfolio-primary mb-2">24/7</div>
-                <div className="text-portfolio-text-muted">Support</div>
+                <div className="text-portfolio-text-muted">دعم متواصل</div>
               </Card>
             </div>
           </div>
@@ -161,10 +160,10 @@ const Portfolio = () => {
       <section id="skills" className="section-padding">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">Skills & Expertise</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">المهارات والخبرات</h2>
             <div className="w-24 h-1 bg-portfolio-primary mx-auto rounded-full"></div>
             <p className="text-lg text-portfolio-text-muted mt-6 max-w-2xl mx-auto">
-              Core technologies I use to bring ideas to life
+              التقنيات الأساسية التي أستخدمها لتحويل الأفكار إلى واقع
             </p>
           </div>
           
@@ -200,10 +199,10 @@ const Portfolio = () => {
       <section id="projects" className="section-padding bg-portfolio-bg-mid/30">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">المشاريع المميزة</h2>
             <div className="w-24 h-1 bg-portfolio-primary mx-auto rounded-full"></div>
             <p className="text-lg text-portfolio-text-muted mt-6 max-w-2xl mx-auto">
-              A showcase of my recent work and personal projects
+              عرض لأحدث أعمالي والمشاريع الشخصية
             </p>
           </div>
           
@@ -246,7 +245,7 @@ const Portfolio = () => {
                     className="w-full bg-portfolio-primary hover:bg-portfolio-secondary text-white glow-primary transition-all duration-300"
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
-                    View Project
+                    عرض المشروع
                   </Button>
                 </div>
               </Card>
@@ -259,26 +258,26 @@ const Portfolio = () => {
       <section id="contact" className="section-padding">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">تواصل معي</h2>
             <div className="w-24 h-1 bg-portfolio-primary mx-auto rounded-full"></div>
             <p className="text-lg text-portfolio-text-muted mt-6">
-              Ready to start your next project? Let's create something amazing together.
+              هل أنت مستعد لبدء مشروعك القادم؟ دعنا نبني شيئاً رائعاً معاً.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div className="animate-slide-up">
-              <h3 className="text-2xl font-semibold text-portfolio-text mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-semibold text-portfolio-text mb-6">لنتواصل</h3>
               <p className="text-portfolio-text-muted mb-8">
-                I'm always interested in new opportunities and exciting projects. 
-                Whether you have a question or just want to say hi, I'll do my best to get back to you!
+                أنا مهتم دائماً بالفرص الجديدة والمشاريع المثيرة. سواء كان لديك سؤال 
+                أو تريد فقط أن تقول مرحباً، سأبذل قصارى جهدي للرد عليك!
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 card-gradient rounded-lg border border-portfolio-primary/30">
                   <Mail className="w-6 h-6 text-portfolio-accent" />
                   <div>
-                    <div className="font-semibold text-portfolio-text">Email</div>
+                    <div className="font-semibold text-portfolio-text">البريد الإلكتروني</div>
                     <div className="text-portfolio-text-muted">ibrahim@example.com</div>
                   </div>
                 </div>
@@ -286,7 +285,7 @@ const Portfolio = () => {
                 <div className="flex items-center gap-4 p-4 card-gradient rounded-lg border border-portfolio-primary/30">
                   <Phone className="w-6 h-6 text-portfolio-accent" />
                   <div>
-                    <div className="font-semibold text-portfolio-text">Phone</div>
+                    <div className="font-semibold text-portfolio-text">الهاتف</div>
                     <div className="text-portfolio-text-muted">+1 (555) 123-4567</div>
                   </div>
                 </div>
@@ -315,17 +314,17 @@ const Portfolio = () => {
             <Card className="card-gradient border border-portfolio-primary/30 p-8 animate-slide-up">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-portfolio-text mb-2">Name</label>
+                  <label className="block text-sm font-medium text-portfolio-text mb-2">الاسم</label>
                   <Input 
                     type="text" 
                     required
                     className="bg-portfolio-bg-start/50 border-portfolio-primary/30 text-portfolio-text placeholder:text-portfolio-text-muted focus:border-portfolio-primary"
-                    placeholder="Your full name"
+                    placeholder="الاسم الكامل"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-portfolio-text mb-2">Email</label>
+                  <label className="block text-sm font-medium text-portfolio-text mb-2">البريد الإلكتروني</label>
                   <Input 
                     type="email" 
                     required
@@ -335,12 +334,12 @@ const Portfolio = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-portfolio-text mb-2">Message</label>
+                  <label className="block text-sm font-medium text-portfolio-text mb-2">الرسالة</label>
                   <Textarea 
                     required
                     rows={5}
                     className="bg-portfolio-bg-start/50 border-portfolio-primary/30 text-portfolio-text placeholder:text-portfolio-text-muted focus:border-portfolio-primary resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder="أخبرني عن مشروعك..."
                   />
                 </div>
                 
@@ -348,7 +347,7 @@ const Portfolio = () => {
                   type="submit" 
                   className="w-full bg-portfolio-primary hover:bg-portfolio-secondary text-white py-3 glow-primary transition-all duration-300"
                 >
-                  Send Message
+                  إرسال الرسالة
                 </Button>
               </form>
             </Card>
@@ -360,7 +359,7 @@ const Portfolio = () => {
       <footer className="bg-portfolio-bg-start border-t border-portfolio-primary/20 py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-portfolio-text-muted">
-            © 2025 Ibrahim Mahmoud – All Rights Reserved
+            © 2025 إبراهيم محمود – جميع الحقوق محفوظة
           </p>
           <div className="flex justify-center gap-6 mt-4">
             <Button 

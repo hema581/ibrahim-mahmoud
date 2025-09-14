@@ -8,11 +8,11 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const navigationItems = [
-    { id: 'home', label: 'Home', icon: Home },
-    { id: 'about', label: 'About', icon: User },
-    { id: 'skills', label: 'Skills', icon: Code },
-    { id: 'projects', label: 'Projects', icon: Briefcase },
-    { id: 'contact', label: 'Contact', icon: Mail },
+    { id: 'home', label: 'الرئيسية', icon: Home },
+    { id: 'about', label: 'نبذة عني', icon: User },
+    { id: 'skills', label: 'المهارات', icon: Code },
+    { id: 'projects', label: 'المشاريع', icon: Briefcase },
+    { id: 'contact', label: 'تواصل معي', icon: Mail },
   ];
 
   useEffect(() => {
@@ -69,7 +69,7 @@ const Navigation = () => {
                   : 'text-portfolio-text-muted hover:text-portfolio-primary hover:bg-portfolio-primary/10'
               }`}
             >
-              <IconComponent className="w-4 h-4 mr-2" />
+              <IconComponent className="w-4 h-4 ml-2" />
               {item.label}
             </Button>
           );
@@ -112,7 +112,7 @@ const Navigation = () => {
                         : 'text-portfolio-text-muted hover:text-portfolio-primary hover:bg-portfolio-primary/10'
                     }`}
                   >
-                    <IconComponent className="w-6 h-6 mr-3" />
+                    <IconComponent className="w-6 h-6 ml-3" />
                     {item.label}
                   </Button>
                 );
