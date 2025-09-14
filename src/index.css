@@ -200,8 +200,10 @@
     @apply sm:flex-row-reverse;
   }
   
-  [dir="rtl"] .justify-between {
-    @apply justify-between;
+  /* Custom RTL justify-between */
+  [dir="rtl"] .justify-between-rtl {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row-reverse;
   }
   
