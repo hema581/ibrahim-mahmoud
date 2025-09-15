@@ -3,12 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://hema581.github.io/ibrahim-mahmoud",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "push": "git add . && git commit -m \"update\" && git push origin main && npm run deploy"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
