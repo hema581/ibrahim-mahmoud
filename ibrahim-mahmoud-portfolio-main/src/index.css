@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ibrahim Mahmoud Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Portfolio Color Palette */
+    --portfolio-bg-start: 195 50% 11%;    /* #0f2027 */
+    --portfolio-bg-mid: 193 36% 19%;      /* #203a43 */
+    --portfolio-bg-end: 194 39% 28%;      /* #2c5364 */
+    --portfolio-primary: 196 100% 50%;    /* #00c6ff */
+    --portfolio-secondary: 320 100% 71%;  /* #ff6ec7 */
+    --portfolio-accent: 48 94% 55%;       /* #f9ca24 */
+    --portfolio-text: 0 0% 100%;          /* #ffffff */
+    --portfolio-text-muted: 228 8% 87%;   /* #dcdde1 */
+    
+    /* Enhanced gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--portfolio-bg-start)), hsl(var(--portfolio-bg-mid)), hsl(var(--portfolio-bg-end)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--portfolio-bg-mid) / 0.8), hsl(var(--portfolio-bg-end) / 0.9));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--portfolio-primary)), hsl(var(--portfolio-secondary)));
+    
+    /* Shadows and glows */
+    --glow-primary: 0 0 30px hsl(var(--portfolio-primary) / 0.5);
+    --glow-secondary: 0 0 20px hsl(var(--portfolio-secondary) / 0.3);
+    --shadow-card: 0 20px 40px hsl(195 50% 11% / 0.6);
+    --shadow-hover: 0 30px 60px hsl(195 50% 11% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --background: var(--portfolio-bg-start);
+    --foreground: var(--portfolio-text);
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-cairo overflow-x-hidden;
+    background: var(--gradient-hero);
+    color: hsl(var(--portfolio-text));
+    scroll-behavior: smooth;
+    direction: rtl;
+  }
+}
+
+@layer components {
+  /* Portfolio specific components */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+  
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-3d:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .skill-card {
+    @apply p-6 rounded-xl;
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--portfolio-primary) / 0.3);
+    transition: var(--transition-smooth);
+  }
+  
+  .skill-card:hover {
+    border-color: hsl(var(--portfolio-primary));
+    box-shadow: var(--glow-primary);
+    transform: translateY(-5px);
+  }
+  
+  .section-padding {
+    @apply px-4 md:px-8 lg:px-12 py-20;
+  }
+  
+  /* RTL specific improvements */
+  [dir="rtl"] .flex {
+    flex-direction: row-reverse;
+  }
+  
+  [dir="rtl"] .flex-col {
+    flex-direction: column;
+  }
+  
+  [dir="rtl"] .sm\:flex-row {
+    @apply sm:flex-row-reverse;
+  }
+  
+  /* Custom RTL justify-between */
+  [dir="rtl"] .justify-between-rtl {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  
+  /* Ensure proper text alignment */
+  [dir="rtl"] .text-left {
+    text-align: right;
+  }
+  
+  [dir="rtl"] .text-right {
+    text-align: left;
+  }
+}
