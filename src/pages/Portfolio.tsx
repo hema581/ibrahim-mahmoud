@@ -136,8 +136,8 @@ const Portfolio = () => {
             
             <div className="grid grid-cols-2 gap-4">
               <Card className="card-gradient p-6 border border-portfolio-primary/30 card-3d">
-                <div className="text-3xl font-bold text-portfolio-primary mb-2">50+</div>
-                <div className="text-portfolio-text-muted">مشروع مكتمل</div>
+                <div className="text-3xl font-bold text-portfolio-primary mb-2">100%</div>
+                <div className="text-portfolio-text-muted">التزام تام بالمواعيد</div>
               </Card>
               <Card className="card-gradient p-6 border border-portfolio-secondary/30 card-3d">
                 <div className="text-3xl font-bold text-portfolio-secondary mb-2">3+</div>
@@ -148,8 +148,8 @@ const Portfolio = () => {
                 <div className="text-portfolio-text-muted">رضا العملاء</div>
               </Card>
               <Card className="card-gradient p-6 border border-portfolio-primary/30 card-3d">
-                <div className="text-3xl font-bold text-portfolio-primary mb-2">24/7</div>
-                <div className="text-portfolio-text-muted">دعم متواصل</div>
+                <div className="text-3xl font-bold text-portfolio-primary mb-2">6+</div>
+                <div className="text-portfolio-text-muted"> لغات برمجة</div>
               </Card>
             </div>
           </div>
